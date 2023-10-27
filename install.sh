@@ -11,4 +11,4 @@ rustup component add clippy rustfmt
 GIT_DIR=$(git rev-parse --git-dir)
 
 echo "Installing pre-commit git hook..."
-ln -s ../../scripts/pre-commit "$GIT_DIR/hooks/pre-commit"
+ln -s ../../pre-commit "$GIT_DIR/hooks/pre-commit"
