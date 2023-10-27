@@ -1,10 +1,16 @@
 # zero2prod
 
+<a href="https://github.com/JohnnyGOX17/zero2prod/actions">
+  <img src="https://img.shields.io/github/actions/workflow/status/JohnnyGOX17/zero2prod/general.yml?branch=master&label=CI%20Tests&logo=github&style=flat-square" height="20" alt="GitHub Workflow Status">
+</a>
+
 Repo for working with [Zero To Production Rust book](https://www.zero2prod.com/index.html?country_code=US)
 
-## Setup
+## Install
 
-- Code coverage: `$ cargo install cargo-tarpaulin`
-- Check crates for security vulnerabilities: `$ cargo install --locked cargo-deny && cargo deny init`
-- Rust linting and formatter: `$ rustup component add clippy rustfmt`
+Run `./install.sh`
+
+## CI
+
+Run `./run_checks.sh`, as well as GitHub actions.
 
