@@ -8,9 +8,14 @@ Repo for working with [Zero To Production Rust book](https://www.zero2prod.com/i
 
 ## Install
 
-Run `./install.sh`
+Run `$ ./install.sh`
 
 ## CI
 
-Run `./run_checks.sh`, as well as GitHub actions.
+Run `$ ./run_checks.sh`, as well as GitHub actions.
 
+## Documentation
+
+```sh
+$ cargo doc --open
+```
