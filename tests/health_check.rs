@@ -12,6 +12,8 @@ use std::net::TcpListener;
 // if we fail to perform the required setup we can just panic and crash
 // all the things.
 fn spawn_app() -> String {
+    // Port 0 is special-cased at the OS level: trying to bind port 0 will trigger
+    // an OS scan for an available port which will then be bound to the application
     let listener =
         TcpListener::bind("127.0.0.1:0").expect("Failed to bind to OS-provided random port");
     // We retrieve toe port assigned to us by the OS
@@ -61,7 +63,6 @@ async fn subscribe_returns_a_200_for_valid_form_data() {
         .await
         .expect("Failed to execute request.");
 
-    // Assert
     assert_eq!(200, response.status().as_u16());
 }
 
@@ -86,7 +87,6 @@ async fn subscribe_returns_a_400_when_data_is_missing() {
             .await
             .expect("Failed to execute request.");
 
-        // Assert
         assert_eq!(
             400,
             response.status().as_u16(),
