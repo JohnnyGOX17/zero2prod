@@ -6,7 +6,7 @@
 
 Repo for working with [Zero To Production Rust book](https://www.zero2prod.com/index.html?country_code=US)
 
-> currently on page: 49
+> currently on page: 57
 
 ## Install
 
